@@ -8,6 +8,8 @@
 
 각각의 역할은 다음과 같다.
 
+이름 | 용도
+-----|-----
 .idea | Intellij IDEA 세팅 디렉토리
 .gitignore | git 무시 규칙 파일
 gradle | gradle-wrapper 파일 디렉토리
