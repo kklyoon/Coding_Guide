@@ -15,3 +15,10 @@
 gradle | gradle-wrapper 파일 디렉토리
 build.gradle | apk 빌드 세팅 
 settings.gradle | 서브 프로젝트 세팅
+
+
+# 프로젝트의 어플리케이션 레벨
+AndroidManifest.xml 은 모든 안드로이드 어플리케이션의 필수적인 파일이다.
+이 파일은 어플리케이션에서 사용하는 activity 목록, 권한, 라이브러리과 같은 어플리케이션의 특성을 정의한다.
+
+res/drawable 은 이미지파일 ( png. jpeg), 9-Patch images ( 늘이기 혹은 반복적으로 사용되는 이미지), xml 로 정의된 이미지
