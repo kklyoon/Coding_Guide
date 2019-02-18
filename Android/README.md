@@ -63,16 +63,16 @@ Component | Prefix
 
 Element | Prefix
 --------|--------
-**TextView** | <layout_name>\_txt\_
-**EditText** | <layout_name>\_et\_
-**Button** | <layout_name>\_btn\_
-**Menu** | <layout_name>\_menu\_
-**ListView** | <layout_name>\_lv\_
-**RecyclerView** | <layout_name>\_rv\_
-**ImageView** | <layout_name>\_img\_
-**LinearLayout** | <layout_name>\_ll\_
-**FrameLayout** | <layout_name>\_fl\_
-**ConstraintLayout** | <layout_name>\_cl\_
+**TextView** | `<layout_name>\_txt\_`
+**EditText** | `<layout_name>\_et\_`
+**Button** | `<layout_name>\_btn\_`
+**Menu** | `<layout_name>\_menu\_`
+**ListView** | `<layout_name>\_lv\_`
+**RecyclerView** | `<layout_name>\_rv\_`
+**ImageView** | `<layout_name>\_img\_`
+**LinearLayout** | `<layout_name>\_ll\_`
+**FrameLayout** | `<layout_name>\_fl\_`
+**ConstraintLayout** | `<layout_name>\_cl\_`
 
 
 ## Drawable Files
