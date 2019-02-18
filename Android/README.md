@@ -44,7 +44,20 @@ strings.xml
 모두 소문자 사용
 
 colors.xml & dimens.xml
+element 당 색을 지정하는 대신 어플리케이션의 color theme 을 정의하자.
+비슷하게 dimens.xml 파일에는 어플리케이션의 일반적인 공백이나 사이즈 등을 각 component 마다 지정하는 대신 통일시키자
 
+Layout Files
+각 레이아웃의 용도에 따라 아래와 같이 접두어를 붙이자
+
+Component | Prefix
+----------|-----
+**Activity** | activity_
+**Fragment** | fragment_
+**Dialog** | dialog_
+**AdapterView item** | item_
+**Menu** | menu_
+**Partial** | partial_
 
 
 
