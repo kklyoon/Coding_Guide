@@ -9,6 +9,7 @@
 각각의 역할은 다음과 같다.
 
 
+ 
 이름 | 용도
 -----|-----
 .idea | Intellij IDEA 세팅 디렉토리
@@ -16,6 +17,7 @@
 gradle | gradle-wrapper 파일 디렉토리
 build.gradle | apk 빌드 세팅 
 settings.gradle | 서브 프로젝트 세팅
+
 
 
 # 프로젝트의 어플리케이션 레벨
@@ -60,6 +62,7 @@ Component | Prefix
 **Partial** | partial_
 
 ## Resource IDs
+안드로이드에서 다른 레이아웃에 있는 같은 이름의 Resource ID 가 허용된다고 할지라도 각각의 이름을 할당해서 쓰는 것이 좋다.
 
 Element | Prefix
 --------|--------
@@ -76,6 +79,7 @@ Element | Prefix
 
 
 ## Drawable Files
+Asset Type 에 따라 다음과 같이 접두어를 붙인다.
 
 Asset Type | Prefix
 -----------|--------
@@ -86,6 +90,7 @@ Asset Type | Prefix
 **Icon** | ic_
 **Image** | img_
 
+이러한 명명법은 안드로이드 프로젝트를 관리하는데 많은 도움이 될 것이다. 물론 100% 이러한 가이드라인에 따를 필요는 없다. 응용은 각자 알아서
 
 # Reference
 <https://medium.com/@mikelimantara/overview-of-android-project-structure-and-naming-conventions-b08f6d0b7291>
