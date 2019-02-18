@@ -87,3 +87,6 @@ Asset Type | Prefix
 **Image** | img_
 
 
+# Reference
+<https://medium.com/@mikelimantara/overview-of-android-project-structure-and-naming-conventions-b08f6d0b7291>
+
