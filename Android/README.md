@@ -22,15 +22,15 @@ settings.gradle | 서브 프로젝트 세팅
 AndroidManifest.xml 은 모든 안드로이드 어플리케이션의 필수적인 파일이다.
 이 파일은 어플리케이션에서 사용하는 activity 목록, 권한, 라이브러리과 같은 어플리케이션의 특성을 정의한다.
 
-> res/drawable 은 이미지파일 ( png. jpeg), 9-Patch images ( 늘이기 혹은 반복적으로 사용되는 이미지), xml 로 정의된 이미지
+ res/drawable 은 이미지파일 ( png. jpeg), 9-Patch images ( 늘이기 혹은 반복적으로 사용되는 이미지), xml 로 정의된 이미지
 
-> res/layout 은 화면을 구성하는 xml 형식의 레이아웃파일, 파일명으로 참조
+ res/layout 은 화면을 구성하는 xml 형식의 레이아웃파일, 파일명으로 참조
 
-> res/menu 메뉴 정의
+ res/menu 메뉴 정의
 
-> res/mipmap 앱런처 아이콘 (홈스크린에 표시되는 앱아이콘)
+ res/mipmap 앱런처 아이콘 (홈스크린에 표시되는 앱아이콘)
 
-> res/values 컬러, 해상도, 문자열, 스타일 등과 같이 반복되어 사용되는 값들이 정의됨
+ res/values 컬러, 해상도, 문자열, 스타일 등과 같이 반복되어 사용되는 값들이 정의됨
 
 build.gradle (Module: app) 특정 모듈로 정의됨 app 의 특성, manifest 로 정의된 빌드속성위에 override 됨, 종속된 라이브러리 정의
 
@@ -39,15 +39,15 @@ build.gradle (Module: app) 특정 모듈로 정의됨 app 의 특성, manifest �
 안드로이드 프로젝트의 **공식적인** 명명 규칙은 없다. 그러니 명명 규칙이 굳이 필요하지는 않지만 나름의 룰을 정해서 프로젝트를 수행하는 것이 나중에 프로젝트 관리차원에서 편리하지 않을까?
 의미있는 파일이름은 파일안에 무엇이 있는지 찾는데 좋은 장치이다. 특히 프로젝트가 커지면 커질 수록
 
-strings.xml
+## strings.xml
 접두어에 layout 명이나 영역을 붙인다. Eg. global_ or error_, etc.
 모두 소문자 사용
 
-colors.xml & dimens.xml
+## colors.xml & dimens.xml
 element 당 색을 지정하는 대신 어플리케이션의 color theme 을 정의하자.
 비슷하게 dimens.xml 파일에는 어플리케이션의 일반적인 공백이나 사이즈 등을 각 component 마다 지정하는 대신 통일시키자
 
-Layout Files
+## Layout Files
 각 레이아웃의 용도에 따라 아래와 같이 접두어를 붙이자
 
 Component | Prefix
@@ -59,7 +59,20 @@ Component | Prefix
 **Menu** | menu_
 **Partial** | partial_
 
+## Resource IDs
 
+Element | Prefix
+--------|--------
+**TextView** | <layout_name>\_txt\_
+**EditText** | <layout_name>\_et\_
+**Button** | <layout_name>\_btn\_
+**Menu** | <layout_name>\_menu\_
+**ListView** | <layout_name>\_lv\_
+**RecyclerView** | <layout_name>\_rv\_
+**ImageView** | <layout_name>\_img\_
+**LinearLayout** | <layout_name>\_ll\_
+**FrameLayout** | <layout_name>\_fl\_
+**ConstraintLayout** | <layout_name>\_cl\_
 
 
 
