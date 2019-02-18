@@ -75,6 +75,15 @@ Element | Prefix
 **ConstraintLayout** | <layout_name>\_cl\_
 
 
+## Drawable Files
 
+Asset Type | Prefix
+-----------|--------
+**Button** | btn_
+**Dialog** | dialog_
+**Divider** | divider_
+**Menu** | menu_
+**Icon** | ic_
+**Image** | img_
 
 
