@@ -25,6 +25,9 @@
 AndroidManifest.xml 은 모든 안드로이드 어플리케이션의 필수적인 파일이다.
 이 파일은 어플리케이션에서 사용하는 activity 목록, 권한, 라이브러리과 같은 어플리케이션의 특성을 정의한다.
 
+
+![](res/android_res_struct.png)
+
  res/drawable 은 이미지파일 ( png. jpeg), 9-Patch images ( 늘이기 혹은 반복적으로 사용되는 이미지), xml 로 정의된 이미지
 
  res/layout 은 화면을 구성하는 xml 형식의 레이아웃파일, 파일명으로 참조
