@@ -92,6 +92,12 @@ Asset Type | Prefix
 
 이러한 명명법은 안드로이드 프로젝트를 관리하는데 많은 도움이 될 것이다. 물론 100% 이러한 가이드라인에 따를 필요는 없다. 응용은 각자 알아서
 
+## Libraries
+라이브러리 추가하는 세가지 방법
+- jar 파일 다운 후 app/libs 디렉토리에 jar 파일 추가
+- Android Studio 메뉴에서 "File -> Project -> Structure -> app" 에서 + 버튼, "Module dependency"
+- build.gradle 파일에 Dependency 
+
 # Reference
 <https://medium.com/@mikelimantara/overview-of-android-project-structure-and-naming-conventions-b08f6d0b7291>
 <https://www.supinfo.com/articles/single/4036-android-studio-structure-and-naming-best-practices>
