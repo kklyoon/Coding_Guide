@@ -10,13 +10,13 @@
 
 
  
-이름 | 용도
------|-----
-.idea | Intellij IDEA 세팅 디렉토리
-.gitignore | git 무시 규칙 파일
-gradle | gradle-wrapper 파일 디렉토리
-build.gradle | apk 빌드 세팅 
-settings.gradle | 서브 프로젝트 세팅
+|이름            | 용도                       |
+|----------------|---------------------------|
+|.idea           | Intellij IDEA 세팅 디렉토리|
+|.gitignore      | git 무시 규칙 파일         |
+|gradle          | gradle-wrapper 파일 디렉토리|
+|build.gradle    | apk 빌드 세팅              |
+|settings.gradle | 서브 프로젝트 세팅          |
 
 
 
@@ -81,16 +81,41 @@ Element | Prefix
 ## Drawable Files
 Asset Type 에 따라 다음과 같이 접두어를 붙인다.
 
-Asset Type | Prefix
------------|--------
-**Button** | btn_
-**Dialog** | dialog_
-**Divider** | divider_
-**Menu** | menu_
-**Icon** | ic_
-**Image** | img_
+Asset Type | Prefix | Example
+-----------|--------|---------
+**Button** | `btn_` | `btn_send.png`
+**Dialog** | `dialog_` | `dialog_top.png`
+**Divider** | `divider_` | `divider_horizontal.png`
+**Menu** | `menu_` | `menu_submenu_bg.png`
+**Icon** | `ic_` | `ic_start.png`
+**Image** | `img_` | `img_sample.png`
+**Action bar** | `ab_` | `ab_stacked.png`
+**Notification** | `notification_` | `notification_bg.png`
+**Tabs** | `tab_` | `tab_pressed.png`
 
-이러한 명명법은 안드로이드 프로젝트를 관리하는데 많은 도움이 될 것이다. 물론 100% 이러한 가이드라인에 따를 필요는 없다. 응용은 각자 알아서
+아이콘도 종류에 따라서 다음과 같이 나눈다.
+
+| Asset Type                      | Prefix             | Example                      |
+| --------------------------------| ----------------   | ---------------------------- |
+| Icons                           | `ic_`              | `ic_star.png`                |
+| Launcher icons                  | `ic_launcher`      | `ic_launcher_calendar.png`   |
+| Menu icons and Action Bar icons | `ic_menu`          | `ic_menu_archive.png`        |
+| Status bar icons                | `ic_stat_notify`   | `ic_stat_notify_msg.png`     |
+| Tab icons                       | `ic_tab`           | `ic_tab_recent.png`          |
+| Dialog icons                    | `ic_dialog`        | `ic_dialog_info.png`         |
+
+selector 도 다음과 같이 나눈다.
+
+| State	       | Suffix          | Example                     |
+|--------------|-----------------|-----------------------------|
+| Normal       | `_normal`       | `btn_order_normal.9.png`    |
+| Pressed      | `_pressed`      | `btn_order_pressed.9.png`   |
+| Focused      | `_focused`      | `btn_order_focused.9.png`   |
+| Disabled     | `_disabled`     | `btn_order_disabled.9.png`  |
+| Selected     | `_selected`     | `btn_order_selected.9.png`  |
+
+
+
 
 ## Libraries
 라이브러리 추가하는 세가지 방법
