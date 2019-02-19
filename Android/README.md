@@ -8,7 +8,8 @@
 
 각각의 역할은 다음과 같다.
 
-![android structure](res/android_dir_struct.png)
+
+<center><img src="res/android_dir_struct.png" width="50%" height="50%"></center>
  
 |이름            | 용도                       |
 |----------------|---------------------------|
