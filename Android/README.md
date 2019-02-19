@@ -18,7 +18,7 @@
 |.idea           | Intellij IDEA 세팅 디렉토리|
 |.gitignore      | git 무시 규칙 파일         |
 |gradle          | gradle-wrapper 파일 디렉토리|
-
+| app/build.gradle | 특정 모듈로 정의됨 app 의 특성, manifest 로 정의된 빌드속성위에 override 됨, 종속된 라이브러리 정의 |
 
 
 # 프로젝트의 어플리케이션 레벨
@@ -28,17 +28,13 @@ AndroidManifest.xml 은 모든 안드로이드 어플리케이션의 필수적�
 
 ![](res/android_res_struct.png)
 
- res/drawable 은 이미지파일 ( png. jpeg), 9-Patch images ( 늘이기 혹은 반복적으로 사용되는 이미지), xml 로 정의된 이미지
-
- res/layout 은 화면을 구성하는 xml 형식의 레이아웃파일, 파일명으로 참조
-
- res/menu 메뉴 정의
-
- res/mipmap 앱런처 아이콘 (홈스크린에 표시되는 앱아이콘)
-
- res/values 컬러, 해상도, 문자열, 스타일 등과 같이 반복되어 사용되는 값들이 정의됨
-
-build.gradle (Module: app) 특정 모듈로 정의됨 app 의 특성, manifest 로 정의된 빌드속성위에 override 됨, 종속된 라이브러리 정의
+|이름            | 용도     |
+|----------------|----------------------|
+|res/drawable    | 이미지파일 ( png. jpeg), 9-Patch images ( 늘이기 혹은 반복적으로 사용되는 이미지), xml 로 정의된 이미지|
+|res/layout      | 화면을 구성하는 xml 형식의 레이아웃파일, 파일명으로 참조 |
+|res/menu  | 메뉴 정의|
+|res/mipmap | 앱런처 아이콘 (홈스크린에 표시되는 앱아이콘) |
+|res/values | 컬러, 해상도, 문자열, 스타일 등과 같이 반복되어 사용되는 값들이 정의됨 |
 
 # Naming Conventions ( 명명 규칙 )
 
