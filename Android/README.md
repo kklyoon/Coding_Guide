@@ -8,15 +8,15 @@
 
 각각의 역할은 다음과 같다.
 
-![android structure](/res/android_dir_struct.png)
+![android structure](res/android_dir_struct.png)
  
 |이름            | 용도                       |
 |----------------|---------------------------|
+|build.gradle    | apk 빌드 세팅              |
+|settings.gradle | 서브 프로젝트 세팅          |
 |.idea           | Intellij IDEA 세팅 디렉토리|
 |.gitignore      | git 무시 규칙 파일         |
 |gradle          | gradle-wrapper 파일 디렉토리|
-|build.gradle    | apk 빌드 세팅              |
-|settings.gradle | 서브 프로젝트 세팅          |
 
 
 
