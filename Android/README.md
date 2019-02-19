@@ -124,11 +124,19 @@ selector 도 다음과 같이 나눈다.
 - build.gradle 파일에 Dependency 
 
 # Reference
+
 <https://developer.android.com/studio/build/>
+
 <https://medium.com/@mikelimantara/overview-of-android-project-structure-and-naming-conventions-b08f6d0b7291>
+
 <https://www.supinfo.com/articles/single/4036-android-studio-structure-and-naming-best-practices>
+
 <https://github.com/ribot/android-guidelines/blob/master/project_and_code_guidelines.md>
+
 <https://github.com/futurice/android-best-practices>
+
 <http://blog.smartlogic.io/2013-07-09-organizing-your-android-development-code-structure/>
+
 <https://guides.codepath.com/android/Organizing-your-Source-Files>
+
 <http://www.innofied.com/13-android-development-best-practices/>
