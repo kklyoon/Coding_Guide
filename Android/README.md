@@ -140,3 +140,5 @@ selector 도 다음과 같이 나눈다.
 <https://guides.codepath.com/android/Organizing-your-Source-Files>
 
 <http://www.innofied.com/13-android-development-best-practices/>
+
+<https://source.android.com/setup/contribute/code-style>
