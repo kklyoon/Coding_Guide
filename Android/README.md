@@ -36,10 +36,14 @@ AndroidManifest.xml 은 모든 안드로이드 어플리케이션의 필수적�
 |res/mipmap | 앱런처 아이콘 (홈스크린에 표시되는 앱아이콘) |
 |res/values | 컬러, 해상도, 문자열, 스타일 등과 같이 반복되어 사용되는 값들이 정의됨 |
 
-# Naming Conventions ( 명명 규칙 )
+# Naming Conventions ( 파일이름  규칙 )
 
 안드로이드 프로젝트의 **공식적인** 명명 규칙은 없다. 그러니 명명 규칙이 굳이 필요하지는 않지만 나름의 룰을 정해서 프로젝트를 수행하는 것이 나중에 프로젝트 관리차원에서 편리하지 않을까?
 의미있는 파일이름은 파일안에 무엇이 있는지 찾는데 좋은 장치이다. 특히 프로젝트가 커지면 커질 수록
+
+## Class files 
+
+클래스 명은 [UpperCamelCase](http://en.wikipedia.org/wiki/CamelCase) 를 따른다. Android component 에 해당되는 클래스는 파일명 끝에 component 이름을 명시한다. 예) `SignInActivity`, `SignInFragment`, `ImageUploaderService`, `ChangePasswordDialog`
 
 ## strings.xml
 접두어에 layout 명이나 영역을 붙인다. Eg. global_ or error_, etc.
