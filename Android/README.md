@@ -45,44 +45,12 @@ AndroidManifest.xml 은 모든 안드로이드 어플리케이션의 필수적�
 
 클래스 명은 [UpperCamelCase](http://en.wikipedia.org/wiki/CamelCase) 를 따른다. Android component 에 해당되는 클래스는 파일명 끝에 component 이름을 명시한다. 예) `SignInActivity`, `SignInFragment`, `ImageUploaderService`, `ChangePasswordDialog`
 
-## strings.xml
-접두어에 layout 명이나 영역을 붙인다. Eg. global_ or error_, etc.
-모두 소문자 사용
+## 리소스 파일
 
-## colors.xml & dimens.xml
-element 당 색을 지정하는 대신 어플리케이션의 color theme 을 정의하자.
-비슷하게 dimens.xml 파일에는 어플리케이션의 일반적인 공백이나 사이즈 등을 각 component 마다 지정하는 대신 통일시키자
+리소스 파일은 소문자와 언더바로 구성 
 
-## Layout Files
-각 레이아웃의 용도에 따라 아래와 같이 접두어를 붙이자
+### Drawable Files
 
-Component | Prefix
-----------|-----
-**Activity** | activity_
-**Fragment** | fragment_
-**Dialog** | dialog_
-**AdapterView item** | item_
-**Menu** | menu_
-**Partial** | partial_
-
-## Resource IDs
-안드로이드에서 다른 레이아웃에 있는 같은 이름의 Resource ID 가 허용된다고 할지라도 각각의 이름을 할당해서 쓰는 것이 좋다.
-
-Element | Prefix
---------|--------
-**TextView** | `<layout_name>_txt_`
-**EditText** | `<layout_name>_et_`
-**Button** | `<layout_name>_btn_`
-**Menu** | `<layout_name>_menu_`
-**ListView** | `<layout_name>_lv_`
-**RecyclerView** | `<layout_name>_rv_`
-**ImageView** | `<layout_name>_img_`
-**LinearLayout** | `<layout_name>_ll_`
-**FrameLayout** | `<layout_name>_fl_`
-**ConstraintLayout** | `<layout_name>_cl_`
-
-
-## Drawable Files
 Asset Type 에 따라 다음과 같이 접두어를 붙인다.
 
 Asset Type | Prefix | Example
@@ -117,6 +85,51 @@ selector 도 다음과 같이 나눈다.
 | Focused      | `_focused`      | `btn_order_focused.9.png`   |
 | Disabled     | `_disabled`     | `btn_order_disabled.9.png`  |
 | Selected     | `_selected`     | `btn_order_selected.9.png`  |
+
+### Layout Files
+
+레이아웃 파일은 안드로이드 컴포넌트 이름이 앞으로 오게 만든다. 예를들어 `SignInActivity` 를 만든다 치면 레이아웃 파일 이름은 `activity_sign_in.xml`.
+
+
+| Component        | Class Name             | Layout Name                   |
+| ---------------- | ---------------------- | ----------------------------- |
+| Activity         | `UserProfileActivity`  | `activity_user_profile.xml`   |
+| Fragment         | `SignUpFragment`       | `fragment_sign_up.xml`        |
+| Dialog           | `ChangePasswordDialog` | `dialog_change_password.xml`  |
+| AdapterView item | ---                    | `item_person.xml`             |
+| Partial layout   | ---                    | `partial_stats_bar.xml`       |
+
+약간 다른 경우로 'Adapter' 를 만들 때 'ListView' 를 만든다면 layout 파일은 'item_' 으로 시작하게 된다.
+
+이러한 규칙은 모든 레이아웃에 적용될 수는 없다. 예를 들어 다른 레이아웃의 일부분을 파일로 만들었을 때는 'partial_' 이라는 이름을 붙여주는 것이 맞다.
+
+### Menu files
+
+레이아웃파일과 비슷하다. `UserActivity` 에서 쓰이는 메뉴파일이라면 `activity_user.xml` 라고 만든다. 이미 'menu' 디렉토리에 존재하기 때문에 굳이 'menu' 라는 이름을 붙이지 않아도 된다. 
+
+
+#### Values files
+
+다음과 같이 복수형으로 파일이름을 만든다. ->  `strings.xml`, `styles.xml`, `colors.xml`, `dimens.xml`, `attrs.xml`
+
+
+## Resource IDs
+안드로이드에서 다른 레이아웃에 있는 같은 이름의 Resource ID 가 허용된다고 할지라도 각각의 이름을 할당해서 쓰는 것이 좋다.
+
+Element | Prefix
+--------|--------
+**TextView** | `<layout_name>_txt_`
+**EditText** | `<layout_name>_et_`
+**Button** | `<layout_name>_btn_`
+**Menu** | `<layout_name>_menu_`
+**ListView** | `<layout_name>_lv_`
+**RecyclerView** | `<layout_name>_rv_`
+**ImageView** | `<layout_name>_img_`
+**LinearLayout** | `<layout_name>_ll_`
+**FrameLayout** | `<layout_name>_fl_`
+**ConstraintLayout** | `<layout_name>_cl_`
+
+
 
 
 
