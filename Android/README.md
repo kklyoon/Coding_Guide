@@ -140,6 +140,14 @@ Element | Prefix
 - Android Studio 메뉴에서 "File -> Project -> Structure -> app" 에서 + 버튼, "Module dependency"
 - build.gradle 파일에 Dependency 
 
+## Code guidelines
+
+### Java language rules
+### Java style rules
+### XML style rules
+### Tests style rules
+
+
 # Reference
 
 <https://developer.android.com/studio/build/>
