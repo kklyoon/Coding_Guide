@@ -9,7 +9,10 @@
 각각의 역할은 다음과 같다.
 
 
-<center><img src="res/android_dir_struct.png" width="50%" height="50%"></center>
+<p align="center">
+  <img width="50%" src="res/android_dir_struct.png" />
+</p>
+
  
 |이름            | 용도                       |
 |----------------|---------------------------|
