@@ -2,15 +2,12 @@
 
 
 
-# 1. 안드로이드 프로젝트 
-
-## 1.1 안드로이드 프로젝트 
+# 1. 프로젝트 구조
 
 <p align="center">
   <img width="33%" src="res/android_dir_struct.png" />
 </p>
 
-각각의 역할은 다음과 같다.
  
 |이름            | 용도                       |
 |----------------|---------------------------|
@@ -20,11 +17,12 @@
 |.gitignore      | git 무시 규칙 파일         |
 |gradle          | gradle-wrapper 파일 디렉토리|
 | app/build.gradle | 특정 모듈로 정의됨 app 의 특성, manifest 로 정의된 빌드속성위에 override 됨, 종속된 라이브러리 정의 |
+|AndroidManifest.xml| 어플라케이션에서 사용되는 activity 목록, 권한, 라이브러리 정의|
+<br> 
 
+  
 
-## 1.2 프로젝트의 어플리케이션 레벨
-AndroidManifest.xml 은 모든 안드로이드 어플리케이션의 필수적인 파일이다.
-이 파일은 어플리케이션에서 사용하는 activity 목록, 권한, 라이브러리과 같은 어플리케이션의 특성을 정의한다.
+### <center>레이아웃 디렉토리</center>
 
 <p align="center">
   <img src="res/android_res_struct.png" />
@@ -39,12 +37,11 @@ AndroidManifest.xml 은 모든 안드로이드 어플리케이션의 필수적�
 |res/mipmap | 앱런처 아이콘 (홈스크린에 표시되는 앱아이콘) |
 |res/values | 컬러, 해상도, 문자열, 스타일 등과 같이 반복되어 사용되는 값들이 정의됨 |
 
-# 2. 이름 규칙 
+# 2. 명명법
 
-안드로이드 프로젝트의 **공식적인** 명명 규칙은 없다. 그러니 명명 규칙이 굳이 필요하지는 않지만 나름의 룰을 정해서 프로젝트를 수행하는 것이 나중에 프로젝트 관리차원에서 편리하지 않을까?
-의미있는 파일이름은 파일안에 무엇이 있는지 찾는데 좋은 장치이다. 특히 프로젝트가 커지면 커질 수록
+안드로이드 프로젝트의 **공식적인** 명명 규칙은 없다. 그러므로 의무적인 사항은 아니다. 하지만 프로젝트 관리차원에서 규칙을 가지고 있는 것은 무엇이 있는지 찾기도 편리하고 특히 프로젝트가 커지면 커질 수록 일관된 규칙속에서 작업해야 효율이 좋을 것이다.
 
-## 2.1 Class files 
+## 2.1 클래스 파일
 
 클래스 명은 [UpperCamelCase](http://en.wikipedia.org/wiki/CamelCase) 를 따른다. Android component 에 해당되는 클래스는 파일명 끝에 component 이름을 명시한다. 예) `SignInActivity`, `SignInFragment`, `ImageUploaderService`, `ChangePasswordDialog`
 
@@ -91,7 +88,7 @@ selector 도 다음과 같이 나눈다.
 
 ### 2.2.2 Layout Files
 
-레이아웃 파일은 안드로이드 컴포넌트 이름이 앞으로 오게 만든다. 예를들어 `SignInActivity` 를 만든다 치면 레이아웃 파일 이름은 `activity_sign_in.xml`.
+레이아웃 파일은 안드로이드 컴포넌트 이름이 앞으로 오게 만든다. 예를 들어 `SignInActivity` 를 만든다 치면 레이아웃 파일 이름은 `activity_sign_in.xml`.
 
 
 | Component        | Class Name             | Layout Name                   |
@@ -146,11 +143,11 @@ Element              | Prefix               | 혹은
 | `action_`            | An action such as "Save" or "Create"  |
 
 
-#### 2.5 스타일과 테마
+## 2.5 스타일과 테마
 
 리소스와는 달리 스타일은  __UpperCamelCase__ 로 명명
 
-### 2.5 레이아웃 Attribute 순서
+## 2.6 레이아웃 Attribute 순서
 
 일반적인 규칙의 attribute 순서는
 
@@ -176,7 +173,7 @@ void setServerPort(String value) {
 }
 ```
 
-_당신의 코드가 에러처리를 안해도 된다든가 처리하는데 중요하지 않다고 생각할 수 있지만, 위와 같은 예외를 무시하면 언젠가 다른 사람이(혹은 당신이) 곤란을 겪게 될 것이다. 모든 예외를 원칙적으로 다뤄야하고 구체적인 방법은 사례에 따라 달라진다._ - ([Android code style guidelines](https://source.android.com/source/code-style.html))
+> _당신의 코드가 에러처리를 안해도 된다든가 처리하는데 중요하지 않다고 생각할 수 있지만, 위와 같은 예외를 무시하면 언젠가 다른 사람이(혹은 당신이) 곤란을 겪게 될 것이다. 모든 예외를 원칙적으로 다뤄야하고 구체적인 방법은 사례에 따라 달라진다._ - ([Android code style guidelines](https://source.android.com/source/code-style.html))
 
 수정된 코드는 __[여기](https://source.android.com/source/code-style.html#dont-ignore-exceptions)__
 
@@ -199,7 +196,7 @@ try {
 ### 3.1.3 finalizers 사용하지 마라
 
 
-_우리는 finalizer를 사용하지 않는다. finalizer 는 언제 불릴지 혹은 불려지기는 할지에 대한 보장이 없다. 대부분의 경우 예외처리만 잘하면 필요없다. 정말 필요하다면 'close()' 메서드같은 것을 정의하고 메서드가 정확히 언제 불려지는지 문서화 하라. `InputStream`을 예로 들면 finalizer 에서 짧은 로그를 찍는건 나쁘진 않지만 로그가 넘쳐나지 않는 이상 꼭 필요한 것은 아니다._- ([Android code style guidelines](https://source.android.com/source/code-style.html#dont-use-finalizers))
+> _우리는 finalizer를 사용하지 않는다. finalizer 는 언제 불릴지 혹은 불려지기는 할지에 대한 보장이 없다. 대부분의 경우 예외처리만 잘하면 필요없다. 정말 필요하다면 'close()' 메서드같은 것을 정의하고 메서드가 정확히 언제 불려지는지 문서화 하라. `InputStream`을 예로 들면 finalizer 에서 짧은 로그를 찍는건 나쁘진 않지만 로그가 넘쳐나지 않는 이상 꼭 필요한 것은 아니다._- ([Android code style guidelines](https://source.android.com/source/code-style.html#dont-use-finalizers))
 
 
 ### 3.1.4 import 정확하게 하기 
@@ -329,9 +326,9 @@ annotation 을 멤버에게 쓸 때는 한줄에 모두 표기해야한다.
 
 ### 3.2.7 변수 범위 제한
 
-_지역 변수의 범위는 최소한으로 제한해야한다. 그렇게 함으로써 코드의 가독성과 유지관리성을 높이고 에러 가능성을 줄일 수 있다._
+> _지역 변수의 범위는 최소한으로 제한해야한다. 그렇게 함으로써 코드의 가독성과 유지관리성을 높이고 에러 가능성을 줄일 수 있다._
 
-_지역 변수는 사용하는 시점에 선언되어야 한다. 대부분의 지역 변수에는 초기화가 포함되어야 한다. 아직 지역 변수를 초기화 하기에 충분한 정보가 없다면 정보가 있을 때까지 선언을 미뤄야 한다._ - ([Android code style guidelines](https://source.android.com/source/code-style.html#limit-variable-scope))
+> _지역 변수는 사용하는 시점에 선언되어야 한다. 대부분의 지역 변수에는 초기화가 포함되어야 한다. 아직 지역 변수를 초기화 하기에 충분한 정보가 없다면 정보가 있을 때까지 선언을 미뤄야 한다._ - ([Android code style guidelines](https://source.android.com/source/code-style.html#limit-variable-scope))
 
 
 ### 3.2.8 import 순서
